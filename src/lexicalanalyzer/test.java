@@ -5,6 +5,7 @@ import java.sql.Array;
 import java.util.ArrayList;
 
 public class test {
+    //功能测试
     public static void main(String[] args) throws IOException {
         ArrayList<Character> ReArray = new ArrayList<Character>();
         preprocessor pre=new preprocessor();

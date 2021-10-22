@@ -5,7 +5,7 @@ import java.sql.Array;
 import java.util.ArrayList;
 
 public class preprocessor {
-
+    //预处理器
     public void readRe(String path, ArrayList<String> array) throws IOException {
         //从文件中读取保留字，界符等
         FileInputStream inputStream = new FileInputStream(path);

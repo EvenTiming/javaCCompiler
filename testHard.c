@@ -4,7 +4,7 @@ int main(int argc, char const *argv[])
 	char *str = "String123";
 	int num1=0x45f7,num2=0187,num3=0x1g35;//num3 16进制格式不对
 	//This is comment
-	/**
+	/**0
 	printf("NULL\n");
 	*/
 	int floatnum = 123.456;@ //出现错误字符
