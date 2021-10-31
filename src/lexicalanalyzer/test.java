@@ -1,19 +1,20 @@
 package lexicalanalyzer;
 
 import java.io.IOException;
-import java.sql.Array;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class test {
     //功能测试
     public static void main(String[] args) throws IOException {
-        ArrayList<Character> ReArray = new ArrayList<Character>();
+        HashMap<String, Integer> hm=new HashMap<String,Integer>();
         preprocessor pre=new preprocessor();
-       // pre.readRe("Rewords.txt",ReArray);
-       String str= pre.readProgram("testHard.c");
-        System.out.println(str);
-//        for(int i=0;i<ReArray.size();i++){
-//            System.out.println(ReArray.get(i));
-//        }
+
+        pre.readRe("Rewords.txt",hm);
+        pre.readRe("Delimiter.txt",hm);
+     //   System.out.println(hm.containsKey("include"));
+
+      processor pro=new processor();
+      pro.process("testHard.c",hm,"result.txt");
+
     }
 }

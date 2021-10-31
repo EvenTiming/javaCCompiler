@@ -19,5 +19,5 @@ int main(int argc, char const *argv[])
     /*×¢ÊÍÎ´Åä¶Ô
 	printf("NULL\n");
 	
-	return 0;*/
+	return 0;
 }

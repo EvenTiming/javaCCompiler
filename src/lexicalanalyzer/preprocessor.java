@@ -3,16 +3,20 @@ package lexicalanalyzer;
 import java.io.*;
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class preprocessor {
     //预处理器
-    public void readRe(String path, ArrayList<String> array) throws IOException {
+    public void readRe(String path, HashMap<String, Integer> hm) throws IOException {
         //从文件中读取保留字，界符等
         FileInputStream inputStream = new FileInputStream(path);
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
         String str = null;
+        int i= hm.size();
         while((str = bufferedReader.readLine()) != null) {
-            array.add(str);
+            hm.put(str,i);
+            i++;
         }
         inputStream.close();
         bufferedReader.close();
